@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Disallow crawling of development paths
+Disallow: /organizador
+Disallow: /admin
+Disallow: /api
+
+# Sitemap
+Sitemap: https://seu-dominio.com/sitemap.xml

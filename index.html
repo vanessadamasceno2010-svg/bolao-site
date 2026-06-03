@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>BolãoCopa 2026 — Crie bolões da Copa do Mundo e monetize</title>
+    <meta name="description" content="Plataforma completa para criar bolões da Copa do Mundo 2026 com seus amigos. Pagamento via PIX automático, ranking em tempo real e comissão para o organizador." />
+    <meta name="keywords" content="bolão, copa do mundo, 2026, futebol, palpites, PIX, prêmio, indicação" />
+    <meta name="author" content="BolãoCopa 2026" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://seu-dominio.com/" />
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="msapplication-TileColor" content="#10b981" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://seu-dominio.com/" />
+    <meta property="og:title" content="BolãoCopa 2026 — Bolão da Copa do Mundo" />
+    <meta property="og:description" content="Crie bolões entre amigos, receba pagamento via PIX e ganhe comissão automática. Ranking em tempo real!" />
+    <meta property="og:image" content="https://seu-dominio.com/images/og-cover.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="BolãoCopa 2026" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://seu-dominio.com/" />
+    <meta name="twitter:title" content="BolãoCopa 2026" />
+    <meta name="twitter:description" content="Crie bolões da Copa 2026, receba pagamento via PIX e monetize!" />
+    <meta name="twitter:image" content="https://seu-dominio.com/images/og-cover.jpg" />
+    
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="BolãoCopa" />
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "BolãoCopa 2026",
+      "description": "Plataforma completa para criar bolões da Copa do Mundo 2026 com seus amigos.",
+      "url": "https://seu-dominio.com",
+      "applicationCategory": "SportsApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "BRL"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "BolãoCopa 2026"
+      }
+    }
+    </script>
+    
+    <style>
+      body { 
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      
+      /* Loading state */
+      #root:empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #0f172a;
+      }
+      
+      #root:empty::after {
+        content: '⚽';
+        font-size: 4rem;
+        animation: bounce 1s infinite;
+      }
+      
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px); }
+      }
+    </style>
+  </head>
+  <body class="bg-slate-950 text-white">
+    <div id="root"></div>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {
+            // Service worker registration failed, continue without it
+          });
+        });
+      }
+    </script>
+    
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
